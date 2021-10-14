@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Author>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2> Get All Authors</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <td>@Html.DisplayNameFor(x=>x.AuthorId)</td>
+        <td>@Html.DisplayNameFor(x=>x.AuthorName)</td>
+    </tr>
+    @foreach (var author in Model)
+	{
+		 <tr>
+             <td>@author.AuthorId</td>
+             <td>@author.AuthorName</td>
+         </tr>
+	}
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<button onclick="GetAllAuthors()" class="btn btn-primary">Get All Authors</button>
+
+<div id="myResult">
+
+
+</div>*@
+
+
+@*<script type="text/javascript">
+
+    function GetAllAuthors() {
+
+        $.ajax({
+            url: 'https://localhost:44381/api/home',
+            type: 'Get',
+            dataType: 'json',
+            success: function (data) {
+                // Call method display all Authors
+            }
+
+        });
+    }
+
+
+
+    function printAllAuthors(data) {
+
+
+        var result="<table><tr><th>Id</td><th>"
+    }
+
+
+</script>*@
